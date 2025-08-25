@@ -1,9 +1,11 @@
 title: Faizul Rakib Sayem
 logo: /assets/img/Sayem.png
 #description: Minimal is a theme for GitHub Pages.
-#show_downloads: false
+show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
 remote_theme: pages-themes/minimal@v0.2.0
+github:
+  is_project_page: false
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
