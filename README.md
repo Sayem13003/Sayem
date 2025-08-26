@@ -1,117 +1,49 @@
-# The Minimal theme
 
-[![.github/workflows/ci.yaml](https://github.com/pages-themes/minimal/actions/workflows/ci.yaml/badge.svg)](https://github.com/pages-themes/minimal/actions/workflows/ci.yaml) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-minimal.svg)](https://badge.fury.io/rb/jekyll-theme-minimal)
 
-*Minimal is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/minimal), or even [use it today](#usage).*
+## Education
 
-![Thumbnail of Minimal](thumbnail.png)
+- **Ph.D., Electrical Engineering**  
+  University of Central Florida (Aug 2024 – Present)
 
-## Usage
+- **B.Sc., Electrical and Electronics Engineering**  
+  University of Dhaka (Jan 2018 – Jan 2023)
 
-To use the Minimal theme:
+## Work Experience
+**Graduate Research Assistant @ University of Central Florida (August 2024 - Present )**
+- A vision-language model induced prompt learning framework that leverages subspace projection to enhance ID/OOD separability for robust out-of-distribution detection.
+- Pseudo-label Induced Subspace Representation Learning for Robust Out-of-Distribution Detection.
+- Proposed a Foundation model aided crowd framework that integrates noisy annotations from different foundation models. and positive class confusion matrices for robust multi-label recognition task.
 
-1. Add the following to your site's `_config.yml`:
+**ML Research Assistant  @ Qatar University (April 2022 - May 2024)**
+- Developed a 1D CycleGAN-based AF detection framework with Self-ONN layers, improving accuracy by 3.5% in restoring poor-quality wrist PPG signals.
+- Developed a robust model combining DenseNet-201 and Multi-axis Vision Transformer with data augmentation to classify 28 categories of waste images.
+- Novel Self-ONN based hybrid DL model with statistical features injection utilizing EEG, EMG and accelerometer signals for multimodal freezing of gait detection.
+- Applied several domain adaptation techniques to improve raman bacteria classification performance from cross-device spectrum datasets.
+  
+## Projects
+### Vision Language Model Based Prompt Optimizaton with Subspace Representation Learning for Few-shot Out-of-Distribution Detection
 
-    ```yml
-    remote_theme: pages-themes/minimal@v0.2.0
-    plugins:
-    - jekyll-remote-theme # add this line to the plugins list if you already have one
-    ```
 
-2. Optionally, if you'd like to preview your site on your computer, add the following to your site's `Gemfile`:
+Recent advances in large-scale vision-language models have enabled promising few-shot OOD detection frameworks using only a handful of in-distribution (ID) samples. Existing prompt learning methods in vision language models focus only on softmax outputs, neglecting the discriminative strength of feature embeddings. To address this, we propose a context optimization based framework that combines subspace representation learning with prompt tuning, enhancing ID-OOD separability through subspace and null-space projections. Our end-to-end learning criterion achieves strong OOD detection while maintaining high ID classification accuracy, validated through experiments on real-world datasets.
+![EEG Band Discovery](/assests/img/subcoop_v2.png)
 
-    ```ruby
-    gem "github-pages", group: :jekyll_plugins
-    ```
+### Foundation Model Aided Crowd Framework with Geometric Regularization
+Multi-label learning is vital for AI applications but suffers from noisy and expensive annotations, as each instance requires multiple labels from diverse annotators. Recent advances in foundation models such as CLIP provide pseudo-labels to reduce annotation costs, but these predictions are not optimized for multi-label tasks and often introduce additional noise. We propose a novel crowd framework that robustly integrates human annotations with different CLIP based pseudo-labels using modeling and factorization techniques. A geometric regularization with end-to-end learning criterion ensures robustness, and experiments on real-world datasets demonstrate the effectiveness of our approach
+![Bike Study](/assets/img/new3.png)
+### Text-to-Image Generation with LLM guided image refinement
+Modern text-to-image systems based on diffusion models struggle with complex prompts describing multi-object scenes with fine-grained attributes and spatial relationships. To address this, we incorporate large language models (LLMs) to analyze prompts and use an open-vocabulary detector to verify whether generated images match the extracted details. If inconsistencies arise, the LLM suggests localized adjustments in the latent representation, refining errors while preserving correct regions. Preliminary experiments demonstrate that this training-free pipeline achieves promising results in both text-to-image generation and image editing, offering precise control over object placement and attributes.
+![Bike Study](/assets/img/method.png)
 
-## Customizing
 
-### Configuration variables
-
-Minimal will respect the following variables, if set in your site's `_config.yml`:
-
-```yml
-title: [The title of your site]
-description: [A short description of your site's purpose]
-```
-
-Additionally, you may choose to set the following optional variables:
-
-```yml
-show_downloads: ["true" or "false" (unquoted) to indicate whether to provide a download URL]
-google_analytics: [Your Google Analytics tracking ID]
-```
-
-### Stylesheet
-
-If you'd like to add your own custom styles:
-
-1. Create a file called `/assets/css/style.scss` in your site
-2. Add the following content to the top of the file, exactly as shown:
-    ```scss
-    ---
-    ---
-
-    @import "{{ site.theme }}";
-    ```
-3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
-
-*Note: If you'd like to change the theme's Sass variables, you must set new values before the `@import` line in your stylesheet.*
-
-### Layouts
-
-If you'd like to change the theme's HTML layout:
-
-1. For some changes such as a custom `favicon`, you can add custom files in your local `_includes` folder. The files [provided with the theme](https://github.com/pages-themes/minimal/tree/master/_includes) provide a starting point and are included by the [original layout template](https://github.com/pages-themes/minimal/blob/master/_layouts/default.html).
-2. For more extensive changes, [copy the original template](https://github.com/pages-themes/minimal/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
-3. Create a file called `/_layouts/default.html` in your site
-4. Paste the default layout content copied in the first step
-5. Customize the layout as you'd like
-
-### Customizing Google Analytics code
-
-Google has released several iterations to their Google Analytics code over the years since this theme was first created. If you would like to take advantage of the latest code, paste it into `_includes/head-custom-google-analytics.html` in your Jekyll site.
-
-### Overriding GitHub-generated URLs
-
-Templates often rely on URLs supplied by GitHub such as links to your repository or links to download your project. If you'd like to override one or more default URLs:
-
-1. Look at [the template source](https://github.com/pages-themes/minimal/blob/master/_layouts/default.html) to determine the name of the variable. It will be in the form of `{{ site.github.zip_url }}`.
-2. Specify the URL that you'd like the template to use in your site's `_config.yml`. For example, if the variable was `site.github.url`, you'd add the following:
-    ```yml
-    github:
-      zip_url: http://example.com/download.zip
-      another_url: another value
-    ```
-3. When your site is built, Jekyll will use the URL you specified, rather than the default one provided by GitHub.
-
-*Note: You must remove the `site.` prefix, and each variable name (after the `github.`) should be indent with two space below `github:`.*
-
-For more information, see [the Jekyll variables documentation](https://jekyllrb.com/docs/variables/).
-
-## Roadmap
-
-See the [open issues](https://github.com/pages-themes/minimal/issues) for a list of proposed features (and known issues).
-
-## Project philosophy
-
-The Minimal theme is intended to make it quick and easy for GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
-
-## Contributing
-
-Interested in contributing to Minimal? We'd love your help. Minimal is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](docs/CONTRIBUTING.md) for instructions on how to contribute.
-
-### Previewing the theme locally
-
-If you'd like to preview the theme locally (for example, in the process of proposing a change):
-
-1. Clone down the theme's repository (`git clone https://github.com/pages-themes/minimal`)
-2. `cd` into the theme's directory
-3. Run `script/bootstrap` to install the necessary dependencies
-4. Run `bundle exec jekyll serve` to start the preview server
-5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
-
-### Running tests
-
-The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` once before the test script will work.
-# Sayem
+## Publications
+1. Faizul Rakib Sayem and Shahana Ibrahim, ”Subspace Representation Learning Based Prompt Optimization for Few-Shot Out-of-Distribution Detection”, Proceedings of the AAAI Conference on Artificial Intelligence, 2026 (under review).
+2. Faizul Rakib Sayem and Shahana Ibrahim, ”Robust Multi-Label Learning with Human-Guided and Foundation Model-Aided Crowd Framework”, IEEE International Conference on Image Processing (ICIP), 2025 (Accepted).
+3. Tarhib Al Azad, Faizul Rakib Sayem, and Shahana Ibrahim. "Pseudo-label Induced Subspace Representation Learning for Robust Out-of-Distribution Detection." arXiv preprint arXiv:2508.03108 (2025).
+4. Faizul Rakib Sayem, and Shahana Ibrahim. "Prompt Optimization Meets Subspace Representation Learning for Few-shot Out-of-Distribution Detection." In First International KDD Workshop on Prompt Optimization, 2025. 2025.
+5. Faizul Rakib Sayem, Md Sakib Bin Islam, Mansura Naznine, Mohammad Nashbat, Mazhar Hasan-Zia, Ali K. Ansaruddin Kunju, Amith Khandakar et al. "Enhancing waste sorting and recycling efficiency: robust deep learning-based approach for classification and detection." Neural Computing and Applications 37, no. 6 (2025): 4567-4583.
+6. Faizul Rakib Sayem, Mosabber Uddin Ahmed, Saadia Binte Alam, Sakib Mahmud, Md Mamun Sheikh, Abdulrahman Alqahtani, Md Ahasan Atick Faisal, and Muhammad EH Chowdhury. "A novel 1D generative adversarial network-based framework for atrial fibrillation detection using restored wrist photoplethysmography signals." Biomedical Signal Processing and Control 101 (2025): 107233.
+7. Adiba Tabassum, Muhammad EH Chowdhury, Md Sakib Bin Islam, Mehrin Newaz, Abdus Salam, Faizul Rakib Sayem, Mazhar Hasan-Mia et al. "Intelligent waste management: a comprehensive review of machine learning and deep learning applications in advanced recycling." Harnessing Automation and Machine Learning for Resource Recovery and Value Creation (2025): 427-460.
+8. Lubaba Tazrian Rahman, Mahmud Elahi Akhter, Faizul Rakib Sayem, Mainul Hossain, Rajib Ahmed, MM Lutfe Elahi, Khaleda Ali, and Sharnali Islam. "A 1.55 μm wideband 1× 2 photonic power splitter with arbitrary ratio: characterization and forward modeling." IEEE Access 10 (2022): 20149-20158.
+9.  Md Mamun Sheikh, Faizul Rakib Sayem, and Md Atiqur Rahman Ahad. "A residual network with focal loss to handle class-imbalance problem on nurse care activity recognition." In 2021 Joint 10th International Conference on Informatics, Electronics & Vision (ICIEV) and 2021 5th International Conference on Imaging, Vision & Pattern Recognition (icIVPR), pp. 1-8. IEEE, 2021.
+10.  Faizul Rakib Sayem, Md Mamun Sheikh, and Md Atiqur Rahman Ahad. "Feature-based method for nurse care complex activity recognition from accelerometer sensor." In Adjunct Proceedings of the 2021 ACM International Joint Conference on Pervasive and Ubiquitous Computing and Proceedings of the 2021 ACM International Symposium on Wearable Computers, pp. 446-451. 2021.
+11.  Faizul Rakib Sayem, Md Mamun Sheikh, and Md Atiqur Rahman Ahad. "Bento Packaging Activity Recognition Based on Statistical Features." In Sensor-and Video-Based Activity and Behavior Computing: Proceedings of 3rd International Conference on Activity and Behavior Computing (ABC 2021), pp. 207-216. Singapore: Springer Nature Singapore, 2022.
