@@ -6,10 +6,10 @@ My research interest lies in vision-language modeling, LLM, object hallucination
 </p>
 ## Education
 
-- **Ph.D., Electrical Engineering**  
+- **Ph.D. in Electrical Engineering**  
   University of Central Florida (Aug 2024 – Present)
 
-- **B.Sc., Electrical and Electronics Engineering**  
+- **B.Sc. in Electrical and Electronics Engineering**  
   University of Dhaka (Jan 2018 – Jan 2023)
 
 ## Work Experience
