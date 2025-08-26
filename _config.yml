@@ -1,6 +1,11 @@
 title: Faizul Rakib Sayem
 logo: /assets/img/Sayem.png
-#description: Minimal is a theme for GitHub Pages.
+description: >
+  <p align="center">
+    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">LinkedIn</a> |
+    <a href="https://scholar.google.com/citations?user=EVdrzM4AAAAJ&hl=en" target="_blank">Google Scholar</a> |
+    <a href="https://github.com/Sayem13003" target="_blank">GitHub</a>
+  </p>
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
