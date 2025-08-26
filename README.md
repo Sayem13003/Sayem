@@ -25,7 +25,7 @@
 
 
 Recent advances in large-scale vision-language models have enabled promising few-shot OOD detection frameworks using only a handful of in-distribution (ID) samples. Existing prompt learning methods in vision language models focus only on softmax outputs, neglecting the discriminative strength of feature embeddings. To address this, we propose a context optimization based framework that combines subspace representation learning with prompt tuning, enhancing ID-OOD separability through subspace and null-space projections. Our end-to-end learning criterion achieves strong OOD detection while maintaining high ID classification accuracy, validated through experiments on real-world datasets.
-![EEG Band Discovery](/assests/img/subcoop_v2.png)
+![EEG Band Discovery](/assets/img/subcoop_v2.png)
 
 ### Foundation Model Aided Crowd Framework with Geometric Regularization
 Multi-label learning is vital for AI applications but suffers from noisy and expensive annotations, as each instance requires multiple labels from diverse annotators. Recent advances in foundation models such as CLIP provide pseudo-labels to reduce annotation costs, but these predictions are not optimized for multi-label tasks and often introduce additional noise. We propose a novel crowd framework that robustly integrates human annotations with different CLIP based pseudo-labels using modeling and factorization techniques. A geometric regularization with end-to-end learning criterion ensures robustness, and experiments on real-world datasets demonstrate the effectiveness of our approach
