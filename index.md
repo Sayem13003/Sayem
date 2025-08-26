@@ -25,14 +25,14 @@
 
 
 Recent advances in large-scale vision-language models have enabled promising few-shot OOD detection frameworks using only a handful of in-distribution (ID) samples. Existing prompt learning methods in vision language models focus only on softmax outputs, neglecting the discriminative strength of feature embeddings. To address this, we propose a context optimization based framework that combines subspace representation learning with prompt tuning, enhancing ID-OOD separability through subspace and null-space projections. Our end-to-end learning criterion achieves strong OOD detection while maintaining high ID classification accuracy, validated through experiments on real-world datasets.
-![EEG Band Discovery](/assests/subcoop_v2.png)
+![EEG Band Discovery](/assets/img/subcoop_v2.png)
 
 ### Foundation Model Aided Crowd Framework with Geometric Regularization
 Multi-label learning is vital for AI applications but suffers from noisy and expensive annotations, as each instance requires multiple labels from diverse annotators. Recent advances in foundation models such as CLIP provide pseudo-labels to reduce annotation costs, but these predictions are not optimized for multi-label tasks and often introduce additional noise. We propose a novel crowd framework that robustly integrates human annotations with different CLIP based pseudo-labels using modeling and factorization techniques. A geometric regularization with end-to-end learning criterion ensures robustness, and experiments on real-world datasets demonstrate the effectiveness of our approach
-![Bike Study](/assests/new3.png)
+![Bike Study](/assets/img/new3.png)
 ### Text-to-Image Generation with LLM guided image refinement
 Modern text-to-image systems based on diffusion models struggle with complex prompts describing multi-object scenes with fine-grained attributes and spatial relationships. To address this, we incorporate large language models (LLMs) to analyze prompts and use an open-vocabulary detector to verify whether generated images match the extracted details. If inconsistencies arise, the LLM suggests localized adjustments in the latent representation, refining errors while preserving correct regions. Preliminary experiments demonstrate that this training-free pipeline achieves promising results in both text-to-image generation and image editing, offering precise control over object placement and attributes.
-![Bike Study](/assests/method.png)
+![Bike Study](/assets/img/method.png)
 
 
 ## Publications
