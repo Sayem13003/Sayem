@@ -1,7 +1,7 @@
 ### About me
 <p align="center">
-I am currently a 2nd year PhD student at the University of Central Florida.<br>
-I am working on weak supervision and noise learning with vision-language modeling.<br>
+I am currently a 2nd year PhD student at the University of Central Florida.
+I am working on weak supervision and noise learning with vision-language modeling.
 My research interest lies in vision-language modeling, LLM, object hallucination mitigation, and alignment with human feedback.
 </p>
 ## Education
